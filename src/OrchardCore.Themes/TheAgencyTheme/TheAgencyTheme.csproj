@@ -6,8 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="node_modules\**" />
     <Compile Remove="wwwroot\node_modules\**" />
+    <EmbeddedResource Remove="node_modules\**" />
     <EmbeddedResource Remove="wwwroot\node_modules\**" />
+    <None Remove="node_modules\**" />
     <None Remove="wwwroot\node_modules\**" />
   </ItemGroup>
 
@@ -19,6 +22,45 @@
 
   <ItemGroup>
     <EmbeddedResource Remove="**\*.less;**\*.scss;" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="compilerconfig.json" />
+    <EmbeddedResource Remove="compilerconfig.json.defaults" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults" />
+    <None Include="wwwroot\scss\bootstrap-oc.scss" />
+    <None Include="wwwroot\scss\modules\_flow.scss" />
+    <None Include="wwwroot\scss\modules\_messages.scss" />
+    <None Include="wwwroot\scss\modules\_pager.scss" />
+    <None Include="wwwroot\scss\modules\_widgets.scss" />
+    <None Include="wwwroot\src\scss\components\_buttons.scss" />
+    <None Include="wwwroot\src\scss\components\_navbar.scss" />
+    <None Include="wwwroot\src\scss\sections\_contact.scss" />
+    <None Include="wwwroot\src\scss\sections\_footer.scss" />
+    <None Include="wwwroot\src\scss\sections\_masthead.scss" />
+    <None Include="wwwroot\src\scss\sections\_portfolio.scss" />
+    <None Include="wwwroot\src\scss\sections\_team.scss" />
+    <None Include="wwwroot\src\scss\sections\_timeline.scss" />
+    <None Include="wwwroot\src\scss\styles.scss" />
+    <None Include="wwwroot\src\scss\variables\_colors.scss" />
+    <None Include="wwwroot\src\scss\variables\_grid.scss" />
+    <None Include="wwwroot\src\scss\variables\_spacing.scss" />
+    <None Include="wwwroot\src\scss\variables\_typography.scss" />
+    <None Include="wwwroot\src\scss\_global.scss" />
+    <None Include="wwwroot\src\scss\_variables.scss" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="wwwroot\Styles\styles.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Update="wwwroot\Styles\styles.min.css">
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </EmbeddedResource>
   </ItemGroup>
 
 </Project>
